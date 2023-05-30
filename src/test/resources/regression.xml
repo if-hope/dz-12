@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Employees unit tests ">
+
+    <test name="Employees regression">
+        <packages>
+            <package name="employees"/>
+        </packages>
+    </test>
+</suite>
