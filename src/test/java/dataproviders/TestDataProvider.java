@@ -24,16 +24,6 @@ public class TestDataProvider {
 
     @DataProvider(name = "retiredMen")
     public static Object[][] createMan() {
-//        List<Number> numbers = getListObjectsFromCsv();
-//        Object[][] objects = new Object[numbers.size()][2];
-//
-//        for(int i = 0; i < numbers.size(); i++){
-//            objects[i][0] = numbers.get(i).getNum1();
-//            objects[i][1] = numbers.get(i).getNum2();
-//        }
-//
-//        return objects;
-
         return getListObjectsFromCsv(PATH, Person.class).stream().map(man -> new Object[]{man.getFirstName(), man.getLastName(), man.getAge(), man.isPartner()})
                 .toArray(Object[][]::new);
     }
