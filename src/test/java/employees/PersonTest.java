@@ -10,10 +10,7 @@ import org.testng.annotations.Test;
 public class PersonTest {
 
     private Man man;
-    private Man manSecond;
     private Woman woman;
-    private Woman womanSecond;
-
 
 
     @BeforeMethod
@@ -28,9 +25,9 @@ public class PersonTest {
     }
 
     @Test(dataProvider = "retiredMen", dataProviderClass = TestDataProvider.class)
-    public void testIsRetiredTrueM(Man man){
-        this.manSecond=man;
-         Assert.assertTrue(manSecond.isRetired(), "The man hasn't reached retirement age");
+    public void testIsRetiredTrueM(String firstName, String lastName, int age, boolean isPartner){
+        man = new Man(firstName, lastName, age, isPartner);
+         Assert.assertTrue(man.isRetired(), "The man hasn't reached retirement age");
     }
 
     @Test
@@ -39,9 +36,9 @@ public class PersonTest {
     }
 
     @Test(dataProvider = "retiredWomen", dataProviderClass = TestDataProvider.class)
-    public void testIsRetiredTrueW(Woman woman){
-        this.womanSecond =woman;
-        Assert.assertTrue(womanSecond.isRetired(), "The woman hasn't reached retirement age");
+    public void testIsRetiredTrueW(String firstName, String lastName, int age, boolean isPartner){
+        woman = new Woman(firstName, lastName, age, isPartner);
+        Assert.assertTrue(woman.isRetired(), "The woman hasn't reached retirement age");
     }
 
     @Test

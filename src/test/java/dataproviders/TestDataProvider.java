@@ -28,6 +28,12 @@ public class TestDataProvider {
                 .toArray(Object[][]::new);
     }
 
+//    @DataProvider(name = "isRetiredFalseMan")
+//    public static Object[][] isRetiredFalseMan() {
+//        return getListObjectsFromCsv("src/test/java/resources/dataForIsRetiredFalseMan.csv", Person.class).stream().map(number -> new Object[]{number.getFirstName(), number.getLastName(), number.getAge()})
+//                .toArray(Object[][]::new);
+//    }
+
 
     @DataProvider(name = "retiredWomen")
     public static Object[][] createWoman() {

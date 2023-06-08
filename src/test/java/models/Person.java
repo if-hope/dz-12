@@ -44,6 +44,6 @@ public class Person {
     }
 
     public void setPartner(boolean partner) {
-        isPartner = partner;
+        this.isPartner = partner;
     }
 }
