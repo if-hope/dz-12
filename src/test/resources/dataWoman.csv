@@ -1,0 +1,3 @@
+firstName, lastName, age, isPartner
+Cate, Black, 60, "true"
+Ann, Jones, 61, "false"
